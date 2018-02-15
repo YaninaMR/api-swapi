@@ -52,7 +52,14 @@
           img.setAttribute('src',images[index]);
           img.setAttribute('class','img-responsive'); 
           img.setAttribute('class','small');        
-     });  
+     });
+    
+     $('.warsClass').each(function (i, itemdiv) {
+            $(itemdiv).on('click',function(event){
+               alert('soy: ' + response[i].name );
+                event.preventDefault();
+             });        
+     }); 
   }
 
   function displayErrors(err){

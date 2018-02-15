@@ -56,7 +56,12 @@
     
      $('.warsClass').each(function (i, itemdiv) {
             $(itemdiv).on('click',function(event){
-               alert('soy: ' + response[i].name );
+               
+               alert('soy: ' + response[i].name + "\n"+
+                     'Color de cabello: '+ response[i].hair_color + "\n"+
+                     'Peso:'+ response[i].mass + "\n"
+                     'Talla'+  response[i].height + "\n" +
+                     'Piel: ' + response[i].skin_color);
                 event.preventDefault();
              });        
      }); 

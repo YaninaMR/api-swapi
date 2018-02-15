@@ -60,7 +60,7 @@
                alert('soy: ' + response[i].name + "\n"+
                      'Color de cabello: '+ response[i].hair_color + "\n"+
                      'Peso:'+ response[i].mass + 'kg.' + "\n" +
-                     'Talla'+  response[i].height + 'm.'+ "\n" +
+                     'Talla: '+  parseInt(response[i].height)*0.01 + 'm'+ "\n" +
                      'Piel: ' + response[i].skin_color);
                 event.preventDefault();
              });        

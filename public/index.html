@@ -7,25 +7,48 @@
     <link href="https://fonts.googleapis.com/css?family=Passion+One" rel="stylesheet">
     <!-- Enlazamos nuestro framework _materialize_ -->
     <link rel="stylesheet" href="vendors/materialize/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
     <!-- Enlazamos nuestra hoja de estilo css -->
     <link rel="stylesheet" href="css/main.css">
        <!-- Enlazamos nuestro logo -->
   </head>
 <body>
   <header class="container"> 
-   <h3>STAR WARS</h3>  
+   <h3>STAR WARS </h3>  
    <div class="site-container">
    
   </div>
-</header>
+  </header>
  <div class="site-container container">
    <div id="response-container" class="col s3"></div>
  </div>
- <section>
-  <!-- Modal Structure -->
-  <div id="content-modal0"></div>
- 
- </section>
+ <!--modal de star -->
+ <div class="modal fade" id="modal-sm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="row">  
+          <div class=" col-lg-offset-2 col l12 col m12 col s12"> 
+                <div class="col l6 m8 s12" id="friend-star"> 
+                  <h5 class="name-actor">Yo soy<span class="name-star"></span> </h5>
+                  <img class="img-star img-responsive" >      
+                </div>
+                <div class="col l6 m4 s12" id="friend-star">
+                  <br>
+                  <br>
+                  <p class="data-actor"><i class="material-icons">face</i><span class="hair-star"></span> </p>
+                  <p class="data-actor"><i class="material-icons">alarm_on</i><span class="mass-star"></span> </p>
+                  <p class="data-actor"><i class="material-icons">format_strikethrough</i><span class="height-star"></span> </p>
+                  <p class="data-actor"><i class="material-icons">palette</i><span class="skin-star"></span> </p>
+                  <p class="data-actor"><i class="material-icons">phonelink_ring</i><span class="phone-star"></span> </p>  
+                </div>               
+            <div>     
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
   <!-- Enlazamos la librería Jquery -->
   <script src="vendors/jquery/jquery-3.2.1.min.js"></script>
   <!-- Enlazamos el archivo jquery de materialize -->

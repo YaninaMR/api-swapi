@@ -2,12 +2,15 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background: rgb(36, 8, 8);
 }
 h3 {
     text-align: center;
     font-family: 'Passion One', cursive;
     color: #fff;
+}
+body {
+    margin: 0;
+    background: rgb(36, 8, 8);
 }
 
 #search-keyword{

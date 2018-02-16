@@ -2,6 +2,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background: rgb(36, 8, 8);
+}
+h3 {
+    text-align: center;
+    font-family: 'Passion One', cursive;
+    color: #fff;
 }
 
 #search-keyword{
@@ -17,9 +23,13 @@
  height: 100px;
  float: left;
  margin-left: 1.5rem;
+ border-radius: 5px;
 }
 
 img.small{
 width: 100%;
 height: 100%;	
+
 }
+/*--- otros estilos ---*/
+

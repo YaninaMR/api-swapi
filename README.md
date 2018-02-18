@@ -29,8 +29,8 @@ EL objetivo en este reto es que mediante la API SWAPI
 
 ### VISTAS DE LA APLICACION
 
- ![img-readme](public/assets/images/VISTA1.PNG)
  ![img-readme](public/assets/images/VISTA2.PNG)
+ ![img-readme](public/assets/images/VISTA1.PNG)
 
 
 

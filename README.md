@@ -21,7 +21,7 @@ EL objetivo en este reto es que mediante la API SWAPI
 - PARA LOS ESTILOS :
    > CSS3 / RESPONSIVE
 
-   > BOOSTRAP
+   > MATERIALIZE
 - FUNCIONALIDAD:
    > JQUERY
 
@@ -31,7 +31,7 @@ EL objetivo en este reto es que mediante la API SWAPI
 
  ![img-readme](public/assets/images/VISTA2.PNG)
 
- 
+
  ![img-readme](public/assets/images/VISTA1.PNG)
 
 

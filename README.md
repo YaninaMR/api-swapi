@@ -36,10 +36,3 @@ EL objetivo en este reto es que mediante la API SWAPI
 
 
 
-
-
-
-** API SWAPI
-======================
-
-![img-readme](public/assets/img/wapi.png)

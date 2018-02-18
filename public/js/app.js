@@ -1,6 +1,6 @@
 
-  const responseContainer = document.getElementById('response-container');
-  let images = [
+const responseContainer = document.getElementById('response-container');
+let images = [
   'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhFNgS3LJuAqmK0xBcoXxyjGEMkNLBj2u6jMT3cgq2pKq3i4im3A',
   'http://celebrationsoxford.co.uk/2101-large_default/gravekeeper-hooded-cloak.jpg', 
   'http://www.fotogramas.es/var/ezflow_site/storage/images/cinefilia/star-wars-mujeres-personajes-femeninos/leia-organa/123062234-1-esl-ES/Leia-Organa_ampliacion.jpg',
@@ -13,65 +13,63 @@
   'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQebuHTVccHi3rfltfR7IvV_mM8eVN8ZAmmjyVMODp26ATm4lvd',
 ];
     
-  window.addEventListener('load',function(e){
-    e.preventDefault();
-    responseContainer.innerHTML = '';
-   fetch(`https://swapi.co/api/people/`)
+window.addEventListener('load', function(e) {
+  e.preventDefault();
+  responseContainer.innerHTML = '';
+  fetch('https://swapi.co/api/people/')
     .then(handleErrors)
     .then(parseJSON)
     .then(addNews)
     .catch(displayErrors);
-  });
+});
 
-  function handleErrors(res){
-    console.log('Se ha presentado un error');
-    if(!res.ok){
-     throw Error(res.status);
-    }
-     return res;
+function handleErrors(res) {
+  console.log('Se ha presentado un error');
+  if (!res.ok) {
+    throw Error(res.status);
   }
+  return res;
+}
 
-  function parseJSON(res){
-    return res.json()
-      .then(function(parsedData){
-        console.log(parsedData);
-        console.log(parsedData.results);
+function parseJSON(res) {
+  return res.json()
+    .then(function(parsedData) {
+      console.log(parsedData);
+      console.log(parsedData.results);
       return parsedData.results;
-
-    })
-  }
-  $('#modal-sm').modal();
-  function addNews(response){
-     $.each(response, function(index) {
-          console.log(index);
-          let div = document.createElement('div');
-          let img = document.createElement('img');
-          responseContainer.appendChild(div); 
-          div.classList.add('warsClass');
-          div.classList.add('modal-trigger');
-          div.setAttribute('data-target','modal-sm'); 
-          div.appendChild(img);
-          img.setAttribute('src',images[index]);
-          img.setAttribute('class','img-responsive'); 
-          img.classList.add('small');
-                 
-     });
+    });
+}
+$('#modal-sm').modal();
+function addNews(response) {
+  $.each(response, function(index) {
+    console.log(index);
+    let div = document.createElement('div');
+    let img = document.createElement('img');
+    responseContainer.appendChild(div); 
+    div.classList.add('warsClass');
+    div.classList.add('modal-trigger');
+    div.setAttribute('data-target', 'modal-sm'); 
+    div.appendChild(img);
+    img.setAttribute('src', images[index]);
+    img.setAttribute('class', 'img-responsive'); 
+    img.classList.add('small');
+  });
     
-   $('.warsClass').each(function (i, itemdiv) {
-         $(itemdiv).on('click',function(event){
-            $('.img-star').attr('src',images[i]);
-            $('.name-star').text(': ' + response[i].name);
-            $('.hair-star').text(' Color de Cabello: ' + response[i].hair_color);
-            $('.mass-star').text(' Peso: ' + response[i].mass + ' kg');
-            $('.height-star').text(' Talla: ' + parseInt(response[i].height)*0.01 + ' m');
-            $('.skin-star').text('Color de Piel: ' + response[i].skin_color);
-            $('.phone-star').text('Celular: ' + '999'+i+'5687'+i);
-            event.preventDefault();
-        });        
-    }); 
-  }
+  $('.warsClass').each(function(i, itemdiv) {
+    $(itemdiv).on('click', function(event) {
+      $('.img-star').attr('src', images[i]);
+      $('.name-star').text(': ' + response[i].name);
+      $('.hair-star').text(' Color de Cabello: ' + response[i].hair_color);
+      $('.mass-star').text(' Peso: ' + response[i].mass + ' kg');
+      $('.height-star').text(' Talla: ' + parseInt(response[i].height) * 0.01 + ' m');
+      $('.skin-star').text('Color de Piel: ' + response[i].skin_color);
+      $('.phone-star').text('Celular: ' + '999' + i + '5687' + i);
+      event.preventDefault();
+    });        
+  }); 
+}
 
-  function displayErrors(err){
-  console.log("INSIDE displayErrors!");
+function displayErrors(err) {
+  console.log('INSIDE displayErrors!');
   console.log(err);
-  }
+}
